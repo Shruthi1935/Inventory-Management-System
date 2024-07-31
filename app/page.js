@@ -59,18 +59,13 @@ export default function Home() {
     updateInventory()
   }, [])
 
-
+  const handleOpen = () => setOpen(true)
+  const handleClose = () => setOpen(false)
 
 
   return (
     <Box> 
       <Typography variant="h2"> Inventory Management </Typography> 
-      {
-        inventory.forEach((item) => {
-          console.log(item)
-          return(<Box> {item.name} {item.count} </Box>)
-        })
-      }
     </Box>
   );
 }
